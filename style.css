@@ -154,6 +154,7 @@ footer {
   }
 
   #trademark {
+    /* margin-top: 20px; */
     text-align: center;
   }
   
@@ -210,4 +211,24 @@ footer {
   #bot-space {
     display: flex;
     justify-content: center;
+  }
+
+  #bot-space-2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #091653;
+    border: 4px solid #091653;
+  }
+
+  .icon:hover {
+    background-color: #1b2f7d;
+    border: 3px solid #1b2f7d; 
   }
