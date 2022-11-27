@@ -1,0 +1,13 @@
+/* Set global attributes */
+* {
+
+}
+
+/* Set nav items to inline */
+nav ul li{
+    display: inline-block;
+}
+
+h2 {
+    align-items: center;
+}
