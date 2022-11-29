@@ -1,13 +1,254 @@
-/* Set global attributes */
+/* GLOBAL */
 * {
-
+    margin: 0%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Set nav items to inline */
-nav ul li{
-    display: inline-block;
+:root {
+  --gray-background-img: url(../images/BG.jpg);
+  --theme-blue: #121e4e;
+  --theme-blue-hover: #1b2f7d;
+}
+
+.spacing-top {
+    padding-top: 100px;
+}
+
+.spacing-bot {
+    padding-bottom: 100px;
+}
+
+/* HEADER  */
+
+header {
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+}
+
+nav {
+    position: fixed;
+    padding: 20px;
+    height: 58px;
+    width: 100vw;
+    background-image: var(--gray-background-img);
+}
+
+nav ul > li{
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+nav li:hover {
+    color: white;
+    background-color: var(--theme-blue-hover);
+    /* border-left: 20px solid var(--theme-blue); */
+    border-top: 21px solid var(--theme-blue-hover);
+    border-bottom: 21px solid var(--theme-blue-hover);
+}
+
+/* MAIN  */
+
+main {
+    display: block;
+    background-color: #8d8686;
+}
+
+
+/* HOME */
+
+#section0 {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/Blue.jpg);
+    color: white;
+    cursor:default;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#link-to-portfolio {
+    padding: 12px 15px 12px 15px;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#link-to-portfolio:hover {
+    content: "";
+    border: 1px solid black;
+    background-image: var(--gray-background-img);
+}
+
+#link-to-portfolio::after {
+    content: "🡪";
+}
+
+#link-to-portfolio:hover::after {
+    content: "🡫";
+}
+
+#box {
+    height:15px;
+    width:15px;
+}
+
+h1 {
+    padding-bottom: 30px;
 }
 
 h2 {
-    align-items: center;
+    text-align: center;
+    cursor: default;
 }
+
+/* ABOUT ME  */
+#profile-img {
+    display: block;
+    align-content: center;
+    width: 425px;
+    height: 315px;
+}
+
+#img-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #7a6e6e;
+    padding: 70px 0 50px 0;
+    position: relative;
+    background-image: var(--gray-background-img);
+}
+
+#toTop {
+    font-size: 30pt;
+    left: 0;
+    line-height: 40pt;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: -25px; 
+    width: 47px;
+}
+
+button {
+    bottom: 0px;
+    align-items: center;
+    border: none;
+    outline: none; 
+    background-color: var(--theme-blue);
+    cursor: pointer; 
+    padding: 15px;
+    font-size: 18px;
+    height: 50px;
+  }
+  
+  button:hover {
+    background-color: var(--theme-blue-hover);
+  }
+
+  #trademark {
+    /* margin-top: 20px; */
+    text-align: center;
+  }
+  
+  /* Style inputs */
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: var(--theme-blue);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--theme-blue-hover);
+  }
+  
+  /* Create two columns that float next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  .row {
+    display: contents;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  #bot-space {
+    display: flex;
+    justify-content: center;
+  }
+
+  #bot-space-2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+
+  .icon {
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: var(--theme-blue);
+    border: 4px solid var(--theme-blue);
+  }
+
+  .icon:hover {
+    background-color: var(--theme-blue-hover);
+    border: 3px solid var(--theme-blue-hover); 
+  }
