@@ -59,6 +59,7 @@ nav a:hover {
 /* MAIN  */
 main {
     display: block;
+    width: 100vw;
     background-color: #8d8686;
 }
 
@@ -126,36 +127,24 @@ h2 {
 }
 
 /* PORTFOLIO */
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+#portfolio1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
-.one {
-  grid-column: 2 / 3;
-  grid-row: 1;
+
+#feature-project {
+  width:100%;
+  height:auto;
 }
-.two {
-  grid-column: 1.5/ 3;
-  grid-row: 2;
+
+.projects {
+  width:50%;
+  height:auto;
+  border:5px solid var(--theme-blue);
 }
-.three {
-  grid-column: 1.5/3;
-  grid-row: 2 ;
-}
-.four {
-  grid-column: 3;
-  grid-row: 3;
-}
-.five {
-  grid-column: 2;
-  grid-row: 4;
-}
-.six {
-  grid-column: 3;
-  grid-row: 4;
-}
+
 
 
 /* CONTACT */
@@ -200,6 +189,8 @@ button:hover {
 
 #trademark {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
   
 /* Style inputs */
@@ -275,7 +266,17 @@ input[type=submit]:hover {
 .icon:hover {
   background-color: var(--theme-blue-hover);
   border: 3px solid var(--theme-blue-hover); 
+  color: white;
 }
+
+#phone {
+  display: inline-block;
+}
+#phone:hover:: {
+
+  content:"test";
+}
+
 
 /* RESPONSIVE SCREEN */
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -284,4 +285,20 @@ input[type=submit]:hover {
     width: 100%;
     margin-top: 0;
   }
+}
+
+footer h4 div{
+  width:auto;
+  /* background-color: #7d7d7d; */
+  padding: 5px;
+  cursor: default;
+}
+footer p {
+  display: inline;
+  color: white;
+}
+
+footer p:hover {
+  color: rgb(166, 180, 255);
+  cursor: default;
 }
