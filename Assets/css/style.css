@@ -269,12 +269,12 @@ input[type=submit]:hover {
   color: white;
 }
 
-#phone {
-  display: inline-block;
-}
-#phone:hover:: {
-
-  content:"test";
+#phone:hover::after {
+  content: "(920) 723 - 5676";
+  color: white;
+  position: absolute;
+  right: 133px;
+  bottom: 105px
 }
 
 
@@ -299,6 +299,6 @@ footer p {
 }
 
 footer p:hover {
-  color: rgb(166, 180, 255);
+  color: white;
   cursor: default;
 }

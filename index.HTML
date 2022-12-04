@@ -102,10 +102,14 @@
         <!-- Contact Section  -->
         <section id="contact" class="spacing-top">
             <h2>Contact Me</h2>
+                <a href="mailto:solomonvana18@gmail.com"></a>
             <div class="spacing-bot" id="bot-space">
                 <div class="row">
                     <div class="column">
-                        <form action="/action_page.php">
+                        <form action=”mailto:solomonvana18@gmail.com” 
+                        method=”POST”
+                        enctype=”text/plain”
+                        name=”EmailForm”>
                             <label for="Name">Name</label>
                             <input type="text" id="Name" name="name" placeholder="Your name...">
                                 
@@ -115,7 +119,7 @@
                             <label for="subject">Subject</label>
                             <textarea id="subject" name="subject" placeholder="Write something..." style="height:170px"></textarea>
                                 
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" >
                         </form>
                     </div>
                 </div>
@@ -143,19 +147,18 @@
             <!-- <div class="icon">
                 <a href="#" target="_blank" title="Handshake"><img src="./assets/images/Handshake.png"></a>
             </div> -->
-
+<!-- 
             <div class="icon">
                 <a href="mailto:solomonvana18@gmail.com" target="_blank" title="Email"><img src="./assets/images/mail-512.png"></a>
-            </div>
+            </div> -->
 
             <div class="icon" id="phone">
-                <a title="Phone Number"><img src="./assets/images/Phone.png"></a>
+                <a title="Phone Number"><img src="./assets/images/Phone.png"><span ></span></a>
             </div>
         </div>  
 
         <div>
-            <!-- <h4 id="trademark">Solomon Vana <span>©2022</span></h4> -->
-        
+                   
         <!-- glimmer method -->
             <h4 id="trademark">
                 <div>
