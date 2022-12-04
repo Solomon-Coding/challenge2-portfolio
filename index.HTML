@@ -8,20 +8,16 @@
 </head>
 
 <body>
-    
-    <!-- Header Sections -->
-        <header>
-            <!-- Navigation -->
-            <nav>
-                <ul>
-                    <li class="inline-text"><a href="#home">Home</a></li>
-                    <li class="inline-text"><a href="#about">About</a></li>
-                    <li class="inline-text"><a href="#portfolio">Portfolio</a></li>                 
-                    <li class="inline-text"><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    
+    <header>
+        <nav>
+            <ul>
+                <li class="inline-text"><a href="#home">Home</a></li>
+                <li class="inline-text"><a href="#about">About</a></li>
+                <li class="inline-text"><a href="#portfolio">Portfolio</a></li>                 
+                <li class="inline-text"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <!-- Welcome Section  -->
         <section id="home">
@@ -102,13 +98,14 @@
         <!-- Contact Section  -->
         <section id="contact" class="spacing-top">
             <h2>Contact Me</h2>
-                <a href="mailto:solomonvana18@gmail.com"></a>
+            <br>
+            <a class="txt-algn" href="mailto:solomonvana18@gmail.com">solomonvana18@gmail.com</a>
             <div class="spacing-bot" id="bot-space">
                 <div class="row">
                     <div class="column">
-                        <form action=”mailto:solomonvana18@gmail.com” 
+                        <!-- <form action=”mailto:solomonvana18@gmail.com” 
                         method=”POST”
-                        enctype=”text/plain”
+                        enctype="multipart/form-data"
                         name=”EmailForm”>
                             <label for="Name">Name</label>
                             <input type="text" id="Name" name="name" placeholder="Your name...">
@@ -116,11 +113,27 @@
                             <label for="Email">Email</label>
                             <input type="email" id="Email" name="email" placeholder="Your email...">
                                 
-                            <label for="subject">Subject</label>
-                            <textarea id="subject" name="subject" placeholder="Write something..." style="height:170px"></textarea>
+                            <label for="Subject">Subject</label>
+                            <textarea id="subject" name="Subject" placeholder="Write something..." style="height:170px"></textarea>
                                 
-                            <input type="submit" value="Submit" >
-                        </form>
+                            <button type="submit" value="Submit" ></button>
+                        </form> -->
+
+                        <!-- METHOD 2 -->
+
+                        <form action="mailto:solomonvana18@gmail.com"
+                        method="POST"
+                        enctype="multipart/form-data"
+                        name="EmailForm">
+                            Name:<br>
+                            <input type="text" size="19" name="Contact-Name"><br><br>
+                            Email:<br>
+                            <input type="email" name="Contact-Email"><br><br> 
+                            Message:<br> 
+                            <textarea name="Contact-Message" rows="6″ cols="20″>
+                            </textarea><br><br> 
+                            <button type="submit" value="Submit">Send</button>
+                        </form>  
                     </div>
                 </div>
             </div>
@@ -139,24 +152,15 @@
             <div class="icon">
                 <a href="https://www.linkedin.com/in/solomon-vana-3a0217197" target="_blank" title="LinkedIn"><img src="./assets/images/Linkedin2.png"></a>
             </div>
-
             <div class="icon">
                 <a href="https://github.com/Solomon-Coding" target="_blank" title="GitHub"><img src="./assets/images/Github2.png"></a>
             </div>
-
-            <!-- <div class="icon">
-                <a href="#" target="_blank" title="Handshake"><img src="./assets/images/Handshake.png"></a>
-            </div> -->
-<!-- 
-            <div class="icon">
-                <a href="mailto:solomonvana18@gmail.com" target="_blank" title="Email"><img src="./assets/images/mail-512.png"></a>
-            </div> -->
-
-            <div class="icon" id="phone">
-                <a title="Phone Number"><img src="./assets/images/Phone.png"><span ></span></a>
-            </div>
         </div>  
-
+        <div>
+            (920) 723 - 5676 
+            | <a href="mailto:solomonvana18@gmail.com">solomonvana18@gmail.com</a> 
+            | 501 Verona Ave. Verona WI, 53593
+        </div>
         <div>
                    
         <!-- glimmer method -->
@@ -168,8 +172,6 @@
                 </div>
             </h4>
         </div>
-
-
     </footer>
     <script src="./assets/js/function.js"></script> 
 </body>
