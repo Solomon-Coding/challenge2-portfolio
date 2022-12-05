@@ -1,14 +1,14 @@
 /* GLOBAL */
 * {
     margin: 0%;
-    width: 100%;
     box-sizing: border-box;
 }
 
 :root {
   --gray-background-img: url(../images/BG.jpg);
-  --theme-blue: #121e4e;
-  --theme-blue-hover: #1b2f7d;
+  --color1: #121e4e;
+  --color2: #1b2f7d;
+  --color3:#535353;
 }
 
 .spacing-top {
@@ -19,24 +19,34 @@
     padding-bottom: 100px;
 }
 
+.outerWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.innerWrapper {
+  margin: 0 auto;
+}
+
 .txt-algn {
   display: flex;
   justify-content: center;
 }
 
-/* HEADER  */
-header {
-    display: flex;
-    text-align: left;
-    width: 100vw;
-    justify-content: space-around;
+/* BODY  */
+body{
+  width: 100vw;
 }
 
-nav {
+/* HEADER  */
+header {
+    display: block;
+    text-align: left;
     position: fixed;
-    padding: 20px;
-    height: 58px;
     width: 100vw;
+    height: 58px;
+    padding: 20px;
+    justify-content: space-around;
     background-image: var(--gray-background-img);
 }
 
@@ -53,22 +63,52 @@ nav a {
 }
 
 nav a:hover {
-    color: white;
-    background-color:#535353;
+    background-color:var(--color3);
     padding-top: 50px;
     padding-bottom: 15px;
-    border-bottom: 6px solid var(--theme-blue);
+    border-bottom: 6px solid var(--color1);
 }
 
 /* MAIN  */
 main {
     display: block;
-    width: 100vw;
+    width: 100%;
     background-color: #8d8686;
 }
 
+#skills div {
+  /* background-color: var(--color1); */
+}
 
-/* HOME */
+#skills ul {
+display: grid;
+list-style: none;
+-ms-grid-columns: (minmax(80px, 1fr))[auto-fill];
+grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+grid-column-gap: 50px;
+grid-row-gap: 50px;
+}
+
+#skills li div{
+  text-decoration: none;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  border: 5px solid var(--color3);
+  background-color: var(--color3);
+}
+
+#skills img {
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+}
+
+#skills p {
+  margin-top: 10px;
+}
+
+/* HOME */ 
 #home {
     display: flex;
     height: 100vh;
@@ -115,6 +155,8 @@ h1 {
 h2 {
     text-align: center;
     cursor: default;
+    color: var(--color1);
+    margin-bottom: 50px;
 }
 
 /* ABOUT ME  */
@@ -148,7 +190,7 @@ h2 {
 .projects {
   width:50%;
   height:auto;
-  border:5px solid var(--theme-blue);
+  border:5px solid var(--color1);
 }
 
 
@@ -164,7 +206,7 @@ footer {
   background: #7a6e6e;
   padding: 70px 0 50px 0;
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-image: var(--gray-background-img);
 }
 
@@ -179,20 +221,20 @@ footer {
   width: 47px;
 }
 
-button {
+footer button {
   bottom: 0px;
   align-items: center;
   border: none;
   outline: none; 
-  background-color: var(--theme-blue);
+  background-color: var(--color1);
   cursor: pointer; 
   padding: 15px;
   font-size: 18px;
   height: 50px;
   }
   
-button:hover {
-  background-color: var(--theme-blue-hover);
+footer button:hover {
+  background-color: var(--color2);
   }
 
 #trademark {
@@ -221,7 +263,7 @@ input[type=email], select, textarea {
 }
   
 button[type=submit] {
-  background-color: var(--theme-blue);
+  background-color: var(--color1);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -229,7 +271,7 @@ button[type=submit] {
 }
   
 button[type=submit]:hover {
-  background-color: var(--theme-blue-hover);
+  background-color: var(--color2);
 }
   
 /* Create two columns that float next to each other */
@@ -263,41 +305,38 @@ button[type=submit]:hover {
 }
 
 .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 34px;
   height: 34px;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: var(--theme-blue);
-  border: 4px solid var(--theme-blue);
+  background-color: var(--color1);
+}
+
+.icon img {
+  width: 25px;
+  height: 25px;
 }
 
 .icon:hover {
-  background-color: var(--theme-blue-hover);
-  border: 3px solid var(--theme-blue-hover); 
-  color: white;
+  background-color: var(--color2);
 }
 
-#phone:hover::after {
-  content: "(920) 723 - 5676";
-  color: white;
-  position: absolute;
-  right: 133px;
-  bottom: 105px
+.icon img:hover {
+  width: 24px;
+  height: 24px;
 }
 
-
-/* RESPONSIVE SCREEN */
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+footer div {
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
 footer h4 div{
   width:auto;
-  /* background-color: #7d7d7d; */
   padding: 5px;
   cursor: default;
 }
@@ -309,4 +348,13 @@ footer p {
 footer p:hover {
   color: white;
   cursor: default;
+}
+
+/* RESPONSIVE SCREEN */
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
