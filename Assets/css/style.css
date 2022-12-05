@@ -2,6 +2,7 @@
 * {
     margin: 0%;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 :root {
@@ -9,6 +10,7 @@
   --color1: #121e4e;
   --color2: #1b2f7d;
   --color3:#535353;
+  --color4: rgb(255, 255, 255);
 }
 
 .spacing-top {
@@ -35,19 +37,32 @@
 
 /* BODY  */
 body{
-  width: 100vw;
+  width: 100%;
+}
+
+section {
+  width: 100%;
 }
 
 /* HEADER  */
 header {
-    display: block;
-    text-align: left;
-    position: fixed;
-    width: 100vw;
-    height: 58px;
-    padding: 20px;
-    justify-content: space-around;
-    background-image: var(--gray-background-img);
+  display: block;
+  text-align: left;
+  position: fixed;
+  width: 100vw;
+  height: 58px;
+  padding: 20px 0px 20px 0px;
+  justify-content: space-around;
+  background-image: var(--gray-background-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 414px) {
+.inline-text {
+  padding-right: 8px;
+  padding-left: 8px;
+  }
 }
 
 nav ul > li{
@@ -58,7 +73,7 @@ nav a {
     text-decoration: none;
     padding-right: 10px;
     padding-left: 10px;
-    color: white;
+    color: var(--color4);
     font-weight: bold;
 }
 
@@ -76,45 +91,14 @@ main {
     background-color: #8d8686;
 }
 
-#skills div {
-  /* background-color: var(--color1); */
-}
-
-#skills ul {
-display: grid;
-list-style: none;
--ms-grid-columns: (minmax(80px, 1fr))[auto-fill];
-grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-grid-column-gap: 50px;
-grid-row-gap: 50px;
-}
-
-#skills li div{
-  text-decoration: none;
-  text-align: center;
-  width: 75px;
-  height: 75px;
-  border: 5px solid var(--color3);
-  background-color: var(--color3);
-}
-
-#skills img {
-  vertical-align: middle;
-  width: 35px;
-  height: 35px;
-}
-
-#skills p {
-  margin-top: 10px;
-}
-
 /* HOME */ 
 #home {
     display: flex;
     height: 100vh;
-    width: 100vw;
     background-image: url(../images/Blue.jpg);
-    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color4);
     cursor:default;
     text-align: center;
     flex-direction: column;
@@ -123,10 +107,11 @@ grid-row-gap: 50px;
 
 #link-to-portfolio {
     padding: 12px 15px 12px 15px;
-    border: 1px solid white;
+    border: 1px solid var(--color4);
     text-decoration: none;
-    color: white;
+    color: var(--color4);
     font-weight: bold;
+    border-radius: 5px;
 }
 
 #link-to-portfolio:hover {
@@ -157,9 +142,30 @@ h2 {
     cursor: default;
     color: var(--color1);
     margin-bottom: 50px;
+    text-decoration-line: underline;
 }
 
 /* ABOUT ME  */
+#about {
+
+}
+
+#blueBox {
+  background-color: var(--color3);
+  border-radius: 15px;
+  margin: 0px 20px;
+}
+
+#blueBox p {
+  color: var(--color4);
+  padding: 15px;
+  text-align: justify;
+}
+
+#blueBox span {
+  color: var(--color1);
+}
+
 #profile-img {
     display: block;
     align-content: center;
@@ -193,55 +199,49 @@ h2 {
   border:5px solid var(--color1);
 }
 
+/* SKILLS */
+#skills div {
+  background-color: var(--color1);
+  border-radius: 15px;
+  margin: 0px 20px;
+}
 
+#skills ul {
+  display: flex;
+  list-style: none;
+  grid-row-gap: 35px;
+  justify-content: space-between;
+  padding: 30px 25px;
+  flex-wrap: wrap;
+}
+
+#skills li div{
+  text-decoration: none;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  border: 5px solid var(--color3);
+  background-color: var(--color3);
+  border-radius: 5px;
+  color: var(--color4);
+}
+
+#skills img {
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+}
+
+#skills p {
+  margin-top: 10px;
+}
 
 /* CONTACT */
 #subject{
 font-family:'Times New Roman', Times, serif;
 }
 
-/* FOOTER */
-footer {
-  display: block;
-  background: #7a6e6e;
-  padding: 70px 0 50px 0;
-  position: relative;
-  width: 100%;
-  background-image: var(--gray-background-img);
-}
 
-#toTop {
-  font-size: 30pt;
-  left: 0;
-  line-height: 40pt;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  top: -25px; 
-  width: 47px;
-}
-
-footer button {
-  bottom: 0px;
-  align-items: center;
-  border: none;
-  outline: none; 
-  background-color: var(--color1);
-  cursor: pointer; 
-  padding: 15px;
-  font-size: 18px;
-  height: 50px;
-  }
-  
-footer button:hover {
-  background-color: var(--color2);
-  }
-
-#trademark {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
   
 /* Style inputs */
 input[type=text], select, textarea {
@@ -264,7 +264,7 @@ input[type=email], select, textarea {
   
 button[type=submit] {
   background-color: var(--color1);
-  color: white;
+  color: var(--color4);
   padding: 12px 20px;
   border: none;
   cursor: pointer;
@@ -298,10 +298,48 @@ button[type=submit]:hover {
   justify-content: center;
 }
 
-#bot-space-2 {
+/* TO TOP BUTTON */
+#toTop {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  position: relative;
+  bottom: 20px;
+  height: 0px;
+  z-index: 1;
+}
+
+#toTop button {
+    background-color: var(--color1);
+    cursor: pointer;
+    padding: 0px;
+    border: 0px;
+    width: 35px;
+    height: 40px;
+    background-image: url(../images/White\ Up\ Arrow.png);
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+#toTop button:hover {
+  background-color: var(--color2);
+}
+
+/* FOOTER */
+footer {
+  display: block;
+  padding: 70px 0 50px 0;
+  position: relative;
+  width: 100%;
+  background-image: var(--gray-background-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#socialItems {
+  display: flex;
+  justify-content: center;
+  padding-inline-start: 0px;
 }
 
 .icon {
@@ -313,6 +351,7 @@ button[type=submit]:hover {
   margin-left: 20px;
   margin-right: 20px;
   background-color: var(--color1);
+  cursor: pointer;
 }
 
 .icon img {
@@ -329,25 +368,24 @@ button[type=submit]:hover {
   height: 24px;
 }
 
-footer div {
-  color: white;
+#contactInfo{
+  color: var(--color4);
   text-decoration: none;
   text-align: center;
+  font-size: 15px;
 }
 
-footer h4 div{
-  width:auto;
-  padding: 5px;
-  cursor: default;
-}
-footer p {
-  display: inline;
-  color: white;
+#contactInfo a {
+  color: var(--color4);
+  text-decoration: none;
 }
 
-footer p:hover {
-  color: white;
-  cursor: default;
+#trademark {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: rgb(159, 159, 159);
+  font-size: small;
 }
 
 /* RESPONSIVE SCREEN */
