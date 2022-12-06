@@ -10,7 +10,7 @@ This portfolio was created with the intent of creating a quality networking tool
 
 ## Portfolio
 
-[Link to Solomon's portfolio](https://solomon-coding.github.io/Portfolio/)
+[Link to Solomon's portfolio](https://solomon-coding.github.io/portfolio/)
 
 ## Credits
 
