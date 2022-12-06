@@ -313,7 +313,6 @@ opacity: .75;
 }
 
 /* CONTACT */
-/* START */
 /* Style inputs */
 input[type=text], select, textarea {
   width: 100%;
@@ -370,7 +369,6 @@ button[type=submit]:hover {
   justify-content: center;
 }
 
-/* END  */
 /* TO TOP BUTTON */
 #toTop {
   display: flex;
