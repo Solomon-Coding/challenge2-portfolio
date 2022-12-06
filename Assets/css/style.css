@@ -56,12 +56,13 @@ header {
   background-image: var(--gray-background-img);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 2;
 }
 
 @media (max-width: 414px) {
 .inline-text {
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
   }
 }
 
@@ -204,7 +205,7 @@ h2 {
 .portfolioWrapper {
   display: grid;
   grid-template-columns: repeat(2, 3fr);
-  grid-template-rows: 100px 100px;
+  grid-template-rows: 135px 100px;
   grid-template-areas:
     "a a "
     "a a "
@@ -216,7 +217,7 @@ h2 {
   .portfolioWrapper{
     display: grid;
     grid-template-columns: repeat(1, 3fr);
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 140px 100px;
     grid-template-areas:
       "a"
       "a"
@@ -231,9 +232,15 @@ h2 {
   background-size:auto;
   background-repeat: no-repeat;
   margin: 20px;
-  border: 2px solid var(--color1);
+  border: 5px solid var(--color1);
   border-radius: 5px;
   text-decoration: none;
+  height: 200px;
+}
+
+.portfolioBoxes:hover {
+/* -webkit-filter: brightness(80%); */
+opacity: .75;
 }
 
 .portfolioBoxes span {
@@ -245,17 +252,17 @@ h2 {
 
 .p1 {
   grid-area: a;
-  background-image: url(../images/Math\ Image.jpg);
+  background-image: url(../images/studyGuide_sc.png);
 }
 
 .p2 {
   grid-area: b;
-  background-image: url(../images/Math\ Image.jpg);
+  background-image: url(../images/horiseon_sc.png);
 }
 
 .p3 {
   grid-area: c;
-  background-image: url(../images/Math\ Image.jpg);
+  background-image: url(../images/Math_image.png);
 }
 
 .p4 {
